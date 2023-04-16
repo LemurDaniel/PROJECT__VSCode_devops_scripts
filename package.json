@@ -1,23 +1,33 @@
 {
-  "name": "devops-scripts",
-  "displayName": "DevOps Scripts",
-  "description": "Some Scripts for making life easier working with Azure DevOps",
+  "name": "devopsscripts",
+  "displayName": "DevOpsScripts",
+  "description": "Some helpful scripts",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.77.0"
   },
   "categories": [
     "Other"
   ],
   "activationEvents": [
-    "onCommand:devops-scripts.helloWorld"
+    "*"
   ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "devops-scripts.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "devopsscripts.helloWorld",
+        "title": "Hello World Test"
+      },
+      {
+        "command": "github.setToken",
+        "title": "Set Githubtoken"
+      },
+      {
+        "command": "github.getToken",
+        "title": "Get Githubtoken"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -25,7 +35,7 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.75.0",
+    "@types/vscode": "^1.77.0",
     "@types/glob": "^8.0.1",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",

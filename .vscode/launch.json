@@ -2,9 +2,19 @@
 // Use IntelliSense to learn about possible attributes.
 // Hover to view descriptions of existing attributes.
 // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+// Using portable version, since problems with loading extensions on normal version
 {
 	"version": "0.2.0",
 	"configurations": [
+		{
+			"name": "Run Local Portable Installation",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "${workspaceFolder}/.portable/VSCode-win32-ia32-1.77.3/Code.exe",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			]
+		},
 		{
 			"name": "Run Extension",
 			"type": "extensionHost",

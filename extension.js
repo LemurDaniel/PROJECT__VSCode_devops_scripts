@@ -3,6 +3,7 @@
 const vscode = require('vscode');
 
 const github = require('./lib/github/activate.js')
+const devops = require('./lib/devops/activate.js')
 const SecretData = require('./lib/utils/SecretData.js')
 
 // This method is called when your extension is activated
@@ -15,6 +16,7 @@ function activate(context) {
 
 	SecretData.init(context)
 	github.activate()
+	devops.activate()
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated

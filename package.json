@@ -25,7 +25,19 @@
       },
       {
         "command": "github.getToken",
-        "title": "Get Githubtoken"
+        "title": "Test request Github"
+      },
+      {
+        "command": "devops.setPat",
+        "title": "Set Devops Pat"
+      },
+      {
+        "command": "devops.test",
+        "title": "Test request DevOps"
+      },
+      {
+        "command": "devops.test2",
+        "title": "Test request DevOps2"
       }
     ]
   },

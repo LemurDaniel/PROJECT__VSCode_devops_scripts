@@ -14,6 +14,35 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "devopsscripts",
+          "title": "DevOps Scripts",
+          "icon": ".resources/azure_devops.png"
+        }
+      ]
+    },
+    "views": {
+      "devopsscripts": [
+        {
+          "id": "devops-projects",
+          "name": "Projects Outline"
+        },
+        {
+          "id": "devops-pipelines",
+          "name": "Pipelines"
+        },
+        {
+          "id": "devops-otherstuff",
+          "name": "testingtestingbla"
+        },
+        {
+          "id": "devops-moreotherstuff",
+          "name": "More stuff, I Guess"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "devopsscripts.helloWorld",
@@ -38,6 +67,10 @@
       {
         "command": "devops.openRepository",
         "title": "DevOps: Open Repository"
+      },
+      {
+        "command": "devops.selectProjects",
+        "title": "DevOps: Select Projects"
       }
     ]
   },

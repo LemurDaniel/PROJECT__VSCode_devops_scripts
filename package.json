@@ -26,7 +26,7 @@
     "views": {
       "devopsscripts": [
         {
-          "id": "devops-projects",
+          "id": "devopsscripts.view.devops-projects",
           "name": "Projects Outline"
         },
         {
@@ -40,6 +40,27 @@
         {
           "id": "devops-moreotherstuff",
           "name": "More stuff, I Guess"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "devopsscripts.project.select",
+          "when": "view == devopsscripts.view.devops-projects",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "devopsscripts.repository.create",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == projectContext",
+          "group": "inline"
+        },
+        {
+          "command": "devopsscripts.project.refresh",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == projectContext",
+          "group": "inline"
         }
       ]
     },
@@ -65,12 +86,22 @@
         "title": "Test request DevOps"
       },
       {
-        "command": "devops.openRepository",
+        "command": "devopsscripts.repository.open",
         "title": "DevOps: Open Repository"
       },
       {
-        "command": "devops.selectProjects",
+        "command": "devopsscripts.project.select",
         "title": "DevOps: Select Projects"
+      },
+      {
+        "command": "devopsscripts.repository.create",
+        "title": "DevOps: Create Repository",
+        "icon": "$(keybindings-add)"
+      },
+      {
+        "command": "devopsscripts.project.refresh",
+        "title": "DevOps: TODO refresh data",
+        "icon": "$(sync)"
       }
     ]
   },

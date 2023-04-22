@@ -68,6 +68,11 @@
           "group": "inline"
         },
         {
+          "command": "devopsscripts.repository.download",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == repositoryContext",
+          "group": "inline"
+        },
+        {
           "command": "devopsscripts.repository.open",
           "when": "view == devopsscripts.view.devops-projects && viewItem == repositoryContext",
           "group": "inline"
@@ -99,6 +104,11 @@
         "command": "devopsscripts.repository.open",
         "title": "DevOps: Open Repository",
         "icon": "$(empty-window)"
+      },
+      {
+        "command": "devopsscripts.repository.download",
+        "title": "DevOps: Download Repository",
+        "icon": "$(cloud-download)"
       },
       {
         "command": "devopsscripts.project.select",

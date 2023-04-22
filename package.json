@@ -46,6 +46,11 @@
     "menus": {
       "view/title": [
         {
+          "command": "devopsscripts.organization.select",
+          "when": "view == devopsscripts.view.devops-projects",
+          "group": "navigation"
+        },
+        {
           "command": "devopsscripts.project.select",
           "when": "view == devopsscripts.view.devops-projects",
           "group": "navigation"
@@ -97,7 +102,13 @@
       },
       {
         "command": "devopsscripts.project.select",
-        "title": "DevOps: Select Projects"
+        "title": "DevOps: Select Projects",
+        "icon": "$(selection)"
+      },
+      {
+        "command": "devopsscripts.organization.select",
+        "title": "DevOps: Select Organization",
+        "icon": "$(filter)"
       },
       {
         "command": "devopsscripts.repository.create",

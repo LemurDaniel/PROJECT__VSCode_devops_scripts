@@ -78,8 +78,13 @@
           "group": "inline"
         },
         {
+          "command": "devopsscripts.pipeline.start",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == pipelineContext",
+          "group": "inline"
+        },
+        {
           "command": "devopsscripts.openBrowser",
-          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext)",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext)",
           "group": "inline"
         }
       ]
@@ -106,9 +111,9 @@
         "title": "Test request DevOps"
       },
       {
-        "command": "devopsscripts.openBrowser",
-        "title": "DevOps: Open in Browser",
-        "icon": "$(globe)"
+        "command": "devopsscripts.pipeline.start",
+        "title": "DevOps: Start Pipeline",
+        "icon": "$(play)"
       },
       {
         "command": "devopsscripts.repository.open",
@@ -121,14 +126,9 @@
         "icon": "$(cloud-download)"
       },
       {
-        "command": "devopsscripts.project.select",
-        "title": "DevOps: Select Projects",
-        "icon": "$(filter)"
-      },
-      {
-        "command": "devopsscripts.organization.select",
-        "title": "DevOps: Select Organization",
-        "icon": "$(account)"
+        "command": "devopsscripts.openBrowser",
+        "title": "DevOps: Open in Browser",
+        "icon": "$(globe)"
       },
       {
         "command": "devopsscripts.repository.create",
@@ -136,9 +136,19 @@
         "icon": "$(keybindings-add)"
       },
       {
+        "command": "devopsscripts.project.select",
+        "title": "DevOps: Select Projects",
+        "icon": "$(filter)"
+      },
+      {
         "command": "devopsscripts.project.refresh",
         "title": "DevOps: TODO refresh data",
         "icon": "$(sync)"
+      },
+      {
+        "command": "devopsscripts.organization.select",
+        "title": "DevOps: Select Organization",
+        "icon": "$(account)"
       }
     ]
   },

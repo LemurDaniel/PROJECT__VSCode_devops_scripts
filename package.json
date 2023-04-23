@@ -27,11 +27,11 @@
       "devopsscripts": [
         {
           "id": "devopsscripts.view.devops-projects",
-          "name": "Projects Outline"
+          "name": "Organization Overview"
         },
         {
-          "id": "devops-pipelines",
-          "name": "Pipelines"
+          "id": "devopsscripts.view.devops-current",
+          "name": "Current Project/Repository view on opened repository or something like that"
         },
         {
           "id": "devops-otherstuff",
@@ -68,13 +68,18 @@
           "group": "inline"
         },
         {
+          "command": "devopsscripts.repository.open",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == repositoryContext",
+          "group": "inline"
+        },
+        {
           "command": "devopsscripts.repository.download",
           "when": "view == devopsscripts.view.devops-projects && viewItem == repositoryContext",
           "group": "inline"
         },
         {
-          "command": "devopsscripts.repository.open",
-          "when": "view == devopsscripts.view.devops-projects && viewItem == repositoryContext",
+          "command": "devopsscripts.openBrowser",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext)",
           "group": "inline"
         }
       ]
@@ -101,6 +106,11 @@
         "title": "Test request DevOps"
       },
       {
+        "command": "devopsscripts.openBrowser",
+        "title": "DevOps: Open in Browser",
+        "icon": "$(globe)"
+      },
+      {
         "command": "devopsscripts.repository.open",
         "title": "DevOps: Open Repository",
         "icon": "$(empty-window)"
@@ -113,12 +123,12 @@
       {
         "command": "devopsscripts.project.select",
         "title": "DevOps: Select Projects",
-        "icon": "$(selection)"
+        "icon": "$(filter)"
       },
       {
         "command": "devopsscripts.organization.select",
         "title": "DevOps: Select Organization",
-        "icon": "$(filter)"
+        "icon": "$(account)"
       },
       {
         "command": "devopsscripts.repository.create",

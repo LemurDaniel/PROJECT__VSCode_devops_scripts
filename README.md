@@ -10,4 +10,4 @@ Mainly automating DevOps, automanaging repositories, downloading, creating Pull 
 # Demo
 
 Currently only supports treeview of Projects in Organization.
-![](.img\tree-view-demo-1.png)
+![tree-view-demo-1](.img/tree-view-demo-1.png)

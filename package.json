@@ -78,13 +78,23 @@
           "group": "inline"
         },
         {
-          "command": "devopsscripts.pipeline.start",
+          "command": "devopsscripts.operation.start",
           "when": "view == devopsscripts.view.devops-projects && viewItem == pipelineContext",
           "group": "inline"
         },
         {
           "command": "devopsscripts.openBrowser",
           "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext)",
+          "group": "inline"
+        },
+        {
+          "command": "devopsscripts.operation.cancel",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == buildActiveContext",
+          "group": "inline"
+        },
+        {
+          "command": "devopsscripts.resource.settings",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == pipelineContext",
           "group": "inline"
         }
       ]
@@ -111,7 +121,7 @@
         "title": "Test request DevOps"
       },
       {
-        "command": "devopsscripts.pipeline.start",
+        "command": "devopsscripts.operation.start",
         "title": "DevOps: Start Pipeline",
         "icon": "$(play)"
       },
@@ -149,6 +159,16 @@
         "command": "devopsscripts.organization.select",
         "title": "DevOps: Select Organization",
         "icon": "$(account)"
+      },
+      {
+        "command": "devopsscripts.operation.cancel",
+        "title": "DevOps: Cancel Operation",
+        "icon": "$(debug-stop)"
+      },
+      {
+        "command": "devopsscripts.resource.settings",
+        "title": "DevOps: Set settings",
+        "icon": "$(gear)"
       }
     ]
   },

@@ -84,7 +84,7 @@
         },
         {
           "command": "devopsscripts.openBrowser",
-          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext)",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext || viewItem == pullRequestContext)",
           "group": "inline"
         },
         {

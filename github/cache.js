@@ -1,4 +1,4 @@
-const Utilscache = require('../utils/utilscache')
+const Utilscache = require('../lib/utils/utilscache')
 
 
 class GithubCache extends Utilscache {

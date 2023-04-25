@@ -83,8 +83,8 @@
           "group": "inline"
         },
         {
-          "command": "devopsscripts.openBrowser",
-          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext || viewItem == pullRequestContext)",
+          "command": "devopsscripts.resource.browser",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext || viewItem == buildActiveContext || viewItem == pullRequestContext)",
           "group": "inline"
         },
         {
@@ -136,7 +136,7 @@
         "icon": "$(cloud-download)"
       },
       {
-        "command": "devopsscripts.openBrowser",
+        "command": "devopsscripts.resource.browser",
         "title": "DevOps: Open in Browser",
         "icon": "$(globe)"
       },

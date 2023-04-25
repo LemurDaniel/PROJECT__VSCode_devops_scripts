@@ -1,4 +1,4 @@
-const SecretData = require('../utils/SecretData')
+const SecretData = require('../lib/utils/SecretData')
 const https = require('https')
 const vscode = require('vscode');
 

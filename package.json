@@ -31,7 +31,7 @@
         },
         {
           "id": "devopsscripts.view.devops-repository",
-          "name": "Repository Overview"
+          "name": "Repository Files"
         },
         {
           "id": "devops-otherstuff",
@@ -53,6 +53,11 @@
         {
           "command": "devopsscripts.project.select",
           "when": "view == devopsscripts.view.devops-projects",
+          "group": "navigation"
+        },
+        {
+          "command": "devopsscripts.repository.switchBranch",
+          "when": "view == devopsscripts.view.devops-repository",
           "group": "navigation"
         }
       ],
@@ -148,6 +153,11 @@
       {
         "command": "devopsscripts.repository.select",
         "title": "DevOps: Select Repository"
+      },
+      {
+        "command": "devopsscripts.repository.switchBranch",
+        "title": "DevOps: Switch Branch",
+        "icon": "$(git-branch)"
       },
       {
         "command": "devopsscripts.project.select",

@@ -30,8 +30,8 @@
           "name": "Organization Overview"
         },
         {
-          "id": "devopsscripts.view.devops-current",
-          "name": "Current Project/Repository view on opened repository or something like that"
+          "id": "devopsscripts.view.devops-repository",
+          "name": "Repository Overview"
         },
         {
           "id": "devops-otherstuff",
@@ -144,6 +144,10 @@
         "command": "devopsscripts.repository.create",
         "title": "DevOps: Create Repository",
         "icon": "$(keybindings-add)"
+      },
+      {
+        "command": "devopsscripts.repository.select",
+        "title": "DevOps: Select Repository"
       },
       {
         "command": "devopsscripts.project.select",

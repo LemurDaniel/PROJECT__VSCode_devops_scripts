@@ -63,8 +63,8 @@
       ],
       "view/item/context": [
         {
-          "command": "devopsscripts.repository.create",
-          "when": "view == devopsscripts.view.devops-projects && viewItem == projectContext",
+          "command": "devopsscripts.resource.create",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == PipelinesFolderContext || viewItem == RepositoriesFolderContext || viewItem == PipelinesFolderContext",
           "group": "inline"
         },
         {
@@ -146,7 +146,7 @@
         "icon": "$(globe)"
       },
       {
-        "command": "devopsscripts.repository.create",
+        "command": "devopsscripts.resource.create",
         "title": "DevOps: Create Repository",
         "icon": "$(keybindings-add)"
       },

@@ -64,12 +64,12 @@
       "view/item/context": [
         {
           "command": "devopsscripts.resource.create",
-          "when": "view == devopsscripts.view.devops-projects && viewItem == PipelinesFolderContext || viewItem == RepositoriesFolderContext || viewItem == PipelinesFolderContext",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == PipelinesFolderContext || viewItem == RepositoriesFolderContext)",
           "group": "inline"
         },
         {
-          "command": "devopsscripts.project.refresh",
-          "when": "view == devopsscripts.view.devops-projects && viewItem == projectContext",
+          "command": "devopsscripts.resource.refresh",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == PipelinesFolderContext || viewItem == RepositoriesFolderContext || viewItem == repositoryContext)",
           "group": "inline"
         },
         {
@@ -165,8 +165,8 @@
         "icon": "$(filter)"
       },
       {
-        "command": "devopsscripts.project.refresh",
-        "title": "DevOps: TODO refresh data",
+        "command": "devopsscripts.resource.refresh",
+        "title": "DevOps: Refresh Data",
         "icon": "$(sync)"
       },
       {

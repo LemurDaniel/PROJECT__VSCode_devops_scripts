@@ -2,7 +2,13 @@
   "name": "devopsscripts",
   "displayName": "DevOpsScripts",
   "description": "Some helpful scripts",
+  "author": "LemurDaniel",
+  "publisher": "LemurDaniel",
   "version": "0.0.1",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/LemurDaniel/PROJECT__VSCode_devops_scripts"
+    },
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -199,7 +205,8 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "test": "node ./test/runTest.js",
+    "package": "vsce package --pre-release --out ./package"
   },
   "devDependencies": {
     "@types/vscode": "^1.77.0",

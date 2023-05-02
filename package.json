@@ -83,6 +83,11 @@
           "group": "inline"
         },
         {
+          "command": "devopsscripts.pullrequest.create",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == repositoryContext",
+          "group": "inline"
+        },
+        {
           "command": "devopsscripts.operation.start",
           "when": "view == devopsscripts.view.devops-projects && viewItem == pipelineContext",
           "group": "inline"
@@ -149,6 +154,11 @@
         "command": "devopsscripts.resource.create",
         "title": "DevOps: Create Repository",
         "icon": "$(keybindings-add)"
+      },
+      {
+        "command": "devopsscripts.pullrequest.create",
+        "title": "DevOps: Create Pull Request",
+        "icon": "$(git-pull-request-create)"
       },
       {
         "command": "devopsscripts.repository.select",

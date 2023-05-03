@@ -1,28 +1,31 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode')
-const devops = require('./lib/activate.js')
-const output = require('./lib/output')
-const SecretData = require('./lib/utils/SecretData.js')
-
-
+const Project = require('./lib/data/project')
+const ProjectView = require('./lib/projectView')
 const RepositoryView = require('./lib/repositoryView')
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+
+const commands = require('./lib/commands/_commands')
 
 /**
  * @param {vscode.ExtensionContext} context
  */
-async function activate(context) {
+function activate(context) {
 
-	SecretData.init(context)
-	devops.activate(context)
+    try {
+        const customPath = vscode.workspace.getConfiguration('devops').get('custom_project_path')
+        Project.customPath = customPath
+    } catch (exception) {
+        vscode.window.showErrorMessage(exception.message)
+        vscode.window.showWarningMessage(`DevOps: Setting Projectpath to Default of '${Project.defaultPath}'`)
+    }
+
+    commands.forEach(disposable => context.subscriptions.push(disposable))
+    context.subscriptions.push(RepositoryView.instance.disposable)
+    context.subscriptions.push(ProjectView.instance.disposable)
 
 }
-
 // This method is called when your extension is deactivated
-function deactivate() {
-	context.subscriptions.forEach(disposable => disposable.dispose());
+function deactivate(context) {
+	context.subscriptions.forEach(disposable => disposable.dispose())
 }
 
 module.exports = {

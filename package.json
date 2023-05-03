@@ -5,10 +5,10 @@
   "author": "LemurDaniel",
   "publisher": "LemurDaniel",
   "version": "0.0.1",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/LemurDaniel/PROJECT__VSCode_devops_scripts"
-    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LemurDaniel/PROJECT__VSCode_devops_scripts"
+  },
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -20,6 +20,47 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Azure DevOps",
+      "properties": {
+        "devops.custom_project_path": {
+          "type": "string",
+          "default": "{{HOME_DIR}}/git/repos/",
+          "editPresentation": "singlelineText",
+          "description": "Path where all Projects an Repositories will be downloaded. (Defaults to '{{HOME_DIR}}/git/repos/')"
+        },
+        "devops.projects.enabled": {
+          "type": "object",
+          "default": {},
+          "properties": {
+            "enabled": {
+              "type": "array",
+              "items": "string"
+            }
+          },
+          "description": "Info about all enabled selected project per organization."
+        },
+        "devops.organization.default": {
+          "type": "object",
+          "properties": {
+            "accountId": {
+              "type": "string"
+            },
+            "accountUri": {
+              "type": "string"
+            },
+            "accountName": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object"
+            }
+          },
+          "default": null,
+          "description": "Info about all enabled selected project per organization."
+        }
+      }
+    },
     "viewsContainers": {
       "activitybar": [
         {

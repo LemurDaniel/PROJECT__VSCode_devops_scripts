@@ -103,7 +103,7 @@
           "group": "navigation"
         },
         {
-          "command": "devopsscripts.repository.switchBranch",
+          "command": "devopsscripts.branch.switch",
           "when": "view == devopsscripts.view.devops-repository",
           "group": "navigation"
         }
@@ -222,7 +222,7 @@
         "title": "DevOps: Select Repository"
       },
       {
-        "command": "devopsscripts.repository.switchBranch",
+        "command": "devopsscripts.branch.switch",
         "title": "DevOps: Switch Branch",
         "icon": "$(git-branch)"
       },

@@ -251,6 +251,24 @@
         "title": "DevOps: Set settings",
         "icon": "$(gear)"
       }
+    ],
+    "colors": [
+      {
+        "id": "devopsscripts.repository",
+        "description": "Default Color for Repositories",
+        "defaults": {
+          "dark": "#FF8C00",
+          "light": "#FF8C00"
+        }
+      },
+      {
+        "id": "devopsscripts.pipeline",
+        "description": "Default Color for Pipelines",
+        "defaults": {
+          "dark": "#4275E3",
+          "light": "#4275E3"
+        }
+      }
     ]
   },
   "scripts": {

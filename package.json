@@ -153,6 +153,11 @@
           "command": "devopsscripts.resource.settings",
           "when": "view == devopsscripts.view.devops-projects && viewItem == pipelineContext",
           "group": "inline"
+        },
+        {
+          "command": "devopsscripts.resource.rename",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == pullRequestContext",
+          "group": "inline"
         }
       ]
     },
@@ -201,6 +206,11 @@
         "command": "devopsscripts.resource.create",
         "title": "DevOps: Create Repository",
         "icon": "$(keybindings-add)"
+      },
+      {
+        "command": "devopsscripts.resource.rename",
+        "title": "DevOps: Update Resource",
+        "icon": "$(pencil)"
       },
       {
         "command": "devopsscripts.pullrequest.create",

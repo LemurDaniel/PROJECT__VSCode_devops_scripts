@@ -130,6 +130,11 @@
           "group": "inline"
         },
         {
+          "command": "devopsscripts.pullrequest.merge",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == pullRequestContext",
+          "group": "inline"
+        },
+        {
           "command": "devopsscripts.pullrequest.create",
           "when": "view == devopsscripts.view.devops-projects && viewItem == repositoryContext",
           "group": "inline"
@@ -162,26 +167,6 @@
       ]
     },
     "commands": [
-      {
-        "command": "devopsscripts.helloWorld",
-        "title": "Hello World Test"
-      },
-      {
-        "command": "github.setToken",
-        "title": "Set Githubtoken"
-      },
-      {
-        "command": "github.getToken",
-        "title": "Test request Github"
-      },
-      {
-        "command": "devops.setPat",
-        "title": "Set Devops Pat"
-      },
-      {
-        "command": "devops.test",
-        "title": "Test request DevOps"
-      },
       {
         "command": "devopsscripts.operation.start",
         "title": "DevOps: Start Pipeline",

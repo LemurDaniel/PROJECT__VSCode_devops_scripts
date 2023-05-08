@@ -218,6 +218,11 @@
         "icon": "$(git-pull-request-create)"
       },
       {
+        "command": "devopsscripts.pullrequest.merge",
+        "title": "DevOps: Merge Pull Request",
+        "icon": "$(merge)"
+      },
+      {
         "command": "devopsscripts.repository.select",
         "title": "DevOps: Select Repository"
       },

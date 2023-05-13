@@ -1,4 +1,5 @@
 const vscode = require('vscode')
+const cache = require('./lib/data/cache')
 const Project = require('./lib/data/project')
 const ProjectView = require('./lib/projectView')
 const RepositoryView = require('./lib/repositoryView')
@@ -10,9 +11,10 @@ const commands = require('./lib/commands/_commands')
  */
 function activate(context) {
 
+    cache.init(context.globalState)
+
     try {
-        const customPath = vscode.workspace.getConfiguration('devops').get('custom_project_path')
-        Project.customPath = customPath
+        Project.customPath = vscode.workspace.getConfiguration('devops').get('custom_project_path')
     } catch (exception) {
         vscode.window.showErrorMessage(exception.message)
         vscode.window.showWarningMessage(`DevOps: Setting Projectpath to Default of '${Project.defaultPath}'`)
@@ -25,10 +27,10 @@ function activate(context) {
 }
 // This method is called when your extension is deactivated
 function deactivate(context) {
-	context.subscriptions.forEach(disposable => disposable.dispose())
+    context.subscriptions.forEach(disposable => disposable.dispose())
 }
 
 module.exports = {
-	activate,
-	deactivate
+    activate,
+    deactivate
 }

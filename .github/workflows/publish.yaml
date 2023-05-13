@@ -1,0 +1,26 @@
+name: Node.js CI
+
+on: workflow_dispatch
+
+env:
+  PUBLISHER: LemurDaniel
+  PAT: ${{ secrets.PUBLISH_PAT }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+
+      - run: npm install
+
+      - run: npm install -g @vscode/vsce
+
+      - name: Publish extension
+        run: vsce publish --pat ${{ env.PAT }}

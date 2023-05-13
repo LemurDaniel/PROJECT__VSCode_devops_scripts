@@ -1,7 +1,7 @@
 {
   "name": "devopsscripts",
-  "displayName": "DevOpsScripts",
-  "description": "Some helpful scripts",
+  "displayName": "Azure DevOps Overview",
+  "description": "VSCode integrated Overiew for managing Projects, Pipelines and Repositories in Azure DevOps.",
   "author": "LemurDaniel",
   "publisher": "LemurDaniel",
   "version": "0.0.1",
@@ -17,7 +17,7 @@
   ],
   "keywords": [
     "devops",
-    "azure"
+    "azuredevops"
   ],
   "activationEvents": [
     "*"
@@ -90,6 +90,11 @@
       "view/title": [
         {
           "command": "devopsscripts.organization.select",
+          "when": "view == devopsscripts.view.devops-projects",
+          "group": "navigation"
+        },
+        {
+          "command": "devopsscripts.organization.refresh",
           "when": "view == devopsscripts.view.devops-projects",
           "group": "navigation"
         },
@@ -226,6 +231,11 @@
         "command": "devopsscripts.organization.select",
         "title": "DevOps: Select Organization",
         "icon": "$(account)"
+      },
+      {
+        "command": "devopsscripts.organization.refresh",
+        "title": "DevOps: refresh Organization",
+        "icon": "$(sync)"
       },
       {
         "command": "devopsscripts.operation.cancel",

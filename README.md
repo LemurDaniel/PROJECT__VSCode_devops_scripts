@@ -1,13 +1,7 @@
-# devopsscripts README
+# Azure DevOps Overview
 
-private project for Testing VS Code Extension.
+VSCode integrated Overiew for managing Projects, Pipelies and Repositories in Azure DevOps:
 
-Mainly automating DevOps, automanaging repositories, downloading, creating Pull Requests, starting Pipelines, etc.
+![project-selection](.img/select-projects.png)
 
-
----
-
-# Demo
-
-Currently only supports treeview of Projects in Organization, but lots of stuff to come in the future.
-![tree-view-demo-2](.img/tree-view-demo-2.png)
+![treeview-sample-1](.img/treeview-sample-1.png)

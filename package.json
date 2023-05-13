@@ -83,14 +83,6 @@
         {
           "id": "devopsscripts.view.devops-repository",
           "name": "Repository Files"
-        },
-        {
-          "id": "devops-otherstuff",
-          "name": "testingtestingbla"
-        },
-        {
-          "id": "devops-moreotherstuff",
-          "name": "More stuff, I Guess"
         }
       ]
     },

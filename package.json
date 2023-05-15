@@ -258,6 +258,22 @@
         }
       },
       {
+        "id": "devopsscripts.pullrequest",
+        "description": "Default Color for PullRequests",
+        "defaults": {
+          "dark": "#FF8C00",
+          "light": "#FF8C00"
+        }
+      },
+      {
+        "id": "devopsscripts.disabled",
+        "description": "Default Color for Disabled Elements",
+        "defaults": {
+          "dark": "#ff5e00",
+          "light": "#ff5e00"
+        }
+      },
+      {
         "id": "devopsscripts.pipeline",
         "description": "Default Color for Pipelines",
         "defaults": {

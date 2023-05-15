@@ -11,7 +11,7 @@ const commands = require('./lib/commands/_commands')
  */
 function activate(context) {
 
-    cache.init(context.globalState)
+    cache.init(context.globalStorageUri.fsPath)
 
     try {
         Project.customPath = vscode.workspace.getConfiguration('devops').get('custom_project_path')

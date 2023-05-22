@@ -31,10 +31,9 @@
           "editPresentation": "singlelineText",
           "description": "Path where all Projects an Repositories will be downloaded. (Defaults to '{{HOME_DIR}}/git/repos/')"
         },
-        "devops.git_set_local_config": {
+        "devops.set_local_git_user": {
           "type": "boolean",
           "default": false,
-          "editPresentation": "singlelineText",
           "description": "Set the --local git user automatically to the logged in devops user. (Avoid commiting with global git user, which might differ)"
         },
         "devops.projects.enabled": {

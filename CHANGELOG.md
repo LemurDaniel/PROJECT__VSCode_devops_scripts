@@ -11,3 +11,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.0.2]
 
 - Setting not showing up
+
+## [1.0.3]
+
+- Only create Projectfolders when downloading repositories

@@ -1,5 +1,7 @@
 # Azure DevOps Overview
 
+`This is a prototype test-Extension, wich may run into errors!`
+
 VSCode integrated Overiew for managing Projects, Pipelies and Repositories in Azure DevOps:
 
 ![project-selection](.img/select-projects.png)

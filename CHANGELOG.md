@@ -18,4 +18,5 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.0.4]
 
-- Fix errors on switching branches in Repository view
+- Fix errors on switching branches in repository view
+- Abillity to remove finished builds from tree view

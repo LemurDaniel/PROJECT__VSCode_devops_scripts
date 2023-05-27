@@ -114,6 +114,11 @@
       ],
       "view/item/context": [
         {
+          "command": "devopsscripts.resource.remove",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == buildContextFinished)",
+          "group": "inline"
+        },
+        {
           "command": "devopsscripts.resource.create",
           "when": "view == devopsscripts.view.devops-projects && (viewItem == PipelinesFolderContext || viewItem == RepositoriesFolderContext)",
           "group": "inline"
@@ -150,12 +155,12 @@
         },
         {
           "command": "devopsscripts.resource.browser",
-          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext || viewItem == buildActiveContext || viewItem == pullRequestContext)",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext || viewItem == buildContextInProgress || viewItem == pullRequestContext)",
           "group": "inline"
         },
         {
           "command": "devopsscripts.operation.cancel",
-          "when": "view == devopsscripts.view.devops-projects && viewItem == buildActiveContext",
+          "when": "view == devopsscripts.view.devops-projects && viewItem == buildContextInProgress",
           "group": "inline"
         },
         {
@@ -195,6 +200,11 @@
         "command": "devopsscripts.resource.create",
         "title": "DevOps: Create Repository",
         "icon": "$(keybindings-add)"
+      },
+      {
+        "command": "devopsscripts.resource.remove",
+        "title": "DevOps: Remove Resource",
+        "icon":"$(trash)"
       },
       {
         "command": "devopsscripts.resource.rename",

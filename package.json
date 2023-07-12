@@ -4,7 +4,7 @@
   "description": "VSCode integrated Overiew for managing Projects, Pipelines and Repositories in Azure DevOps.",
   "author": "LemurDaniel",
   "publisher": "LemurDaniel",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/LemurDaniel/PROJECT__VSCode_devops_scripts"
@@ -92,12 +92,17 @@
     "menus": {
       "view/title": [
         {
+          "command": "devopsscripts.organization.refresh",
+          "when": "view == devopsscripts.view.devops-projects",
+          "group": "navigation"
+        },
+        {
           "command": "devopsscripts.organization.select",
           "when": "view == devopsscripts.view.devops-projects",
           "group": "navigation"
         },
         {
-          "command": "devopsscripts.organization.refresh",
+          "command": "devopsscripts.account.login",
           "when": "view == devopsscripts.view.devops-projects",
           "group": "navigation"
         },
@@ -155,7 +160,7 @@
         },
         {
           "command": "devopsscripts.resource.browser",
-          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext || viewItem == buildContextInProgress || viewItem == pullRequestContext)",
+          "when": "view == devopsscripts.view.devops-projects && (viewItem == repositoryContext || viewItem == pipelineContext || viewItem == buildContext || viewItem == buildContextInProgress ||  viewItem == buildContextFinished || viewItem == pullRequestContext)",
           "group": "inline"
         },
         {
@@ -176,6 +181,16 @@
       ]
     },
     "commands": [
+      {
+        "command": "devopsscripts.resource.refresh",
+        "title": "DevOps: Refresh Data",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "devopsscripts.account.login",
+        "title": "DevOps: Account Login",
+        "icon": "$(sign-in)"
+      },
       {
         "command": "devopsscripts.operation.start",
         "title": "DevOps: Start Pipeline",
@@ -204,7 +219,7 @@
       {
         "command": "devopsscripts.resource.remove",
         "title": "DevOps: Remove Resource",
-        "icon":"$(trash)"
+        "icon": "$(trash)"
       },
       {
         "command": "devopsscripts.resource.rename",
@@ -234,11 +249,6 @@
         "command": "devopsscripts.project.select",
         "title": "DevOps: Select Projects",
         "icon": "$(filter)"
-      },
-      {
-        "command": "devopsscripts.resource.refresh",
-        "title": "DevOps: Refresh Data",
-        "icon": "$(sync)"
       },
       {
         "command": "devopsscripts.organization.select",

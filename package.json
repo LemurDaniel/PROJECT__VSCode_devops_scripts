@@ -4,7 +4,7 @@
   "description": "VSCode integrated Overiew for managing Projects, Pipelines and Repositories in Azure DevOps.",
   "author": "LemurDaniel",
   "publisher": "LemurDaniel",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/LemurDaniel/PROJECT__VSCode_devops_scripts"
@@ -50,17 +50,20 @@
         "devops.organization.default": {
           "type": "object",
           "properties": {
-            "accountId": {
-              "type": "string"
-            },
-            "accountUri": {
-              "type": "string"
-            },
-            "accountName": {
-              "type": "string"
-            },
+            "user": "object",
             "properties": {
-              "type": "object"
+              "accountId": {
+                "type": "string"
+              },
+              "accountUri": {
+                "type": "string"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "object"
+              }
             }
           },
           "default": null,
